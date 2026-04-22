@@ -216,48 +216,48 @@ if not st.session_state.api_key:
     )
     if api_key_input:
         st.session_state.api_key = api_key_input
-    st.markdown("---")
-    st.markdown("### 🎭 Choose Your Subject")
+st.markdown("---")
+st.markdown("### 🎭 Choose Your Subject")
 
-    selected_persona_key = st.radio(
-        "Who would you like to interview?",
-        options=list(PERSONAS.keys()),
-        label_visibility="collapsed",
-    )
+selected_persona_key = st.radio(
+    "Who would you like to interview?",
+    options=list(PERSONAS.keys()),
+    label_visibility="collapsed",
+)
 
-    # Reset conversation when persona changes
-    if selected_persona_key != st.session_state.current_persona:
-        st.session_state.current_persona = selected_persona_key
-        st.session_state.messages = []
-        st.rerun()
+# Reset conversation when persona changes
+if selected_persona_key != st.session_state.current_persona:
+    st.session_state.current_persona = selected_persona_key
+    st.session_state.messages = []
+    st.rerun()
 
-    persona = PERSONAS[selected_persona_key]
+persona = PERSONAS[selected_persona_key]
 
-    st.markdown("---")
-    st.markdown(f"**About:**")
-    st.info(persona["description"])
+st.markdown("---")
+st.markdown(f"**About:**")
+st.info(persona["description"])
 
-    if st.button("🔄 Clear Conversation", use_container_width=True):
-        st.session_state.messages = []
-        st.rerun()
+if st.button("🔄 Clear Conversation", use_container_width=True):
+    st.session_state.messages = []
+    st.rerun()
 
-    st.markdown("---")
-    st.markdown("### 💡 Sample Questions")
-    for q in persona["sample_questions"]:
-        if st.button(f"❝ {q}", key=f"sq_{q}", use_container_width=True):
-            if not st.session_state.api_key:
-                st.error("Please enter your API key first.")
-            else:
-                with st.spinner(f"{persona['short_name']} is thinking…"):
-                    st.session_state.messages.append({"role": "user", "content": q})
-                    kb = load_knowledge_base(persona["file"])
-                    reply = get_claude_response(
-                        st.session_state.messages,
-                        persona["system"],
-                        kb,
-                    )
-                    st.session_state.messages.append({"role": "assistant", "content": reply})
-                st.rerun()
+st.markdown("---")
+st.markdown("### 💡 Sample Questions")
+for q in persona["sample_questions"]:
+    if st.button(f"❝ {q}", key=f"sq_{q}", use_container_width=True):
+        if not st.session_state.api_key:
+            st.error("Please enter your API key first.")
+        else:
+            with st.spinner(f"{persona['short_name']} is thinking…"):
+                st.session_state.messages.append({"role": "user", "content": q})
+                kb = load_knowledge_base(persona["file"])
+                reply = get_claude_response(
+                    st.session_state.messages,
+                    persona["system"],
+                    kb,
+                )
+                st.session_state.messages.append({"role": "assistant", "content": reply})
+            st.rerun()
 
 # ── Main area ─────────────────────────────────────────────────────────────────
 st.markdown(
