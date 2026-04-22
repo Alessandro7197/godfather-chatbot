@@ -77,7 +77,7 @@ PERSONAS = {
     "✍️  Mario Puzo  —  Author": {
         "short_name": "Mario Puzo",
         "icon": "✍️",
-        "file": "knowledge_base/author.txt",
+        "file": "author.txt",
         "color": "#d4a843",
         "description": "Interview Mario Puzo about writing the novel, his inspirations, characters, and themes.",
         "intro": "Good evening. I'm Mario Puzo. Ask me anything about the book — why I wrote it, how I built the characters, what I really think of Coppola's film. I'll be straight with you.",
@@ -99,7 +99,7 @@ If asked about something you genuinely would not know (events after 1999, for ex
     "🎬  Francis Ford Coppola  —  Director": {
         "short_name": "Francis Ford Coppola",
         "icon": "🎬",
-        "file": "knowledge_base/director.txt",
+        "file": "director.txt",
         "color": "#c0392b",
         "description": "Interview Coppola about directing the film, his creative decisions, and working with Puzo.",
         "intro": "Hello. I'm Francis Coppola. I have strong opinions about The Godfather — about what I was trying to do, the battles I had to fight, what it all means. Please, ask me anything.",
@@ -120,7 +120,7 @@ Stay in character. Speak from the perspective of your career and known statement
     "📚  Literary Critic": {
         "short_name": "Literary Critic",
         "icon": "📚",
-        "file": "knowledge_base/literary_critic.txt",
+        "file": "literary_critic.txt",
         "color": "#2980b9",
         "description": "Discuss the novel's themes, literary significance, and place in American literature.",
         "intro": "Welcome. I represent a composite of critical and scholarly perspectives on Puzo's novel. I'm here to discuss The Godfather as literature — its themes, its craft, its cultural significance, and its place in the American literary tradition. What would you like to explore?",
@@ -142,7 +142,7 @@ Be specific. Reference actual critics and scholarly works when relevant. Offer g
     "🎥  Film Critic": {
         "short_name": "Film Critic",
         "icon": "🎥",
-        "file": "knowledge_base/film_critic.txt",
+        "file": "film_critic.txt",
         "color": "#27ae60",
         "description": "Discuss the film's cinematography, performances, cultural impact, and why it endures.",
         "intro": "Hello. I'm here as a composite voice of film criticism on The Godfather — drawing on decades of critical writing, scholarship, and analysis of Coppola's film. Let's talk cinema. What aspect of the film interests you most?",
