@@ -206,16 +206,16 @@ with st.sidebar:
     st.markdown("---")
 
     # API key
+if not st.session_state.api_key:
     api_key_input = st.text_input(
         "🔑 Anthropic API Key",
         type="password",
-        value=st.session_state.api_key,
+        value="",
         help="Get your key at console.anthropic.com",
         placeholder="sk-ant-..."
     )
     if api_key_input:
         st.session_state.api_key = api_key_input
-
     st.markdown("---")
     st.markdown("### 🎭 Choose Your Subject")
 
