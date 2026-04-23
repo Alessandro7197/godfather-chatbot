@@ -7,7 +7,7 @@ a composite Literary Critic, and a Film Critic — all grounded in curated knowl
 
 ## 🎭 How to Use the Chatbot
 
-1. **Select a persona** from the sidebar radio buttons:
+1. **Select a persona** from the sidebar buttons:
    - ✍️ Mario Puzo (Author)
    - 🎬 Francis Ford Coppola (Director)
    - 📚 Literary Critic
